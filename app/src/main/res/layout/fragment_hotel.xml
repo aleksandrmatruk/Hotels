@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,21 +8,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape_rounded_variants_card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="19dp"
                 android:textSize="18sp"
                 tools:text="Отель" />
 
@@ -30,9 +29,7 @@
                 android:id="@+id/hotel_photos"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginRight="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image_20"
                 tools:ignore="ContentDescription" />
@@ -40,7 +37,6 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/shape_rounded_variants"
                 android:orientation="horizontal"
@@ -70,7 +66,6 @@
                 android:id="@+id/hotel_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:textSize="18sp"
                 tools:text="Steigenberger Makadi" />
@@ -79,7 +74,6 @@
                 android:id="@+id/hotel_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:textColor="#0D72FF"
                 android:textSize="17sp"
@@ -89,14 +83,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:textSize="30sp"
                     tools:text="от 134 673 ₽" />
 
@@ -116,18 +108,12 @@
             android:layout_height="match_parent"
             android:layout_marginTop="8dp"
             android:background="@drawable/shape_rounded_variants_card_2"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="5dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:padding="5dp"
                     android:textSize="20sp"
@@ -136,6 +122,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
                     android:background="@drawable/shape_rounded_variants_card_2"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -157,6 +144,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
                     android:background="@drawable/shape_rounded_variants_card_2"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -173,34 +161,27 @@
                         android:layout_margin="5dp"
                         tools:text="1 км до пляжа" />
 
-
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:padding="5dp"
                     tools:text="Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:padding="10dp"
+                    android:layout_marginVertical="8dp"
                     android:background="@drawable/shape_rounded_variants_card_2"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_margin="8dp"
                         android:background="@drawable/shape_rounded_variants"
                         android:orientation="horizontal"
                         android:padding="5dp">
@@ -247,9 +228,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_margin="8dp"
                         android:background="@drawable/shape_rounded_variants"
                         android:orientation="horizontal"
                         android:padding="5dp">
@@ -296,9 +275,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_margin="8dp"
+
                         android:background="@drawable/shape_rounded_variants"
                         android:orientation="horizontal"
                         android:padding="5dp">
@@ -352,12 +330,8 @@
                     android:layout_marginTop="10dp"
                     android:text="К выбору номера" />
 
-
-            </LinearLayout>
-
-
         </LinearLayout>
 
     </LinearLayout>
 
-</FrameLayout>
+</androidx.core.widget.NestedScrollView>
