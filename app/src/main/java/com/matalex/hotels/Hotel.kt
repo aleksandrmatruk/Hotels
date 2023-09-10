@@ -9,14 +9,13 @@ import com.matalex.hotels.databinding.FragmentHotelBinding
 
 class Hotel : Fragment() {
 
-    lateinit var binding: FragmentHotelBinding
+    private lateinit var binding: FragmentHotelBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHotelBinding.inflate(inflater, container, false)
-        // Inflate the layout for this fragment
         return binding.root
     }
 }
