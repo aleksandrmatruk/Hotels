@@ -31,10 +31,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginStart="15dp"
-                android:scaleType="centerCrop"
-
                 android:layout_marginTop="10dp"
+
                 android:layout_marginEnd="15dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/image_20"
                 tools:ignore="ContentDescription" />
 
@@ -45,17 +45,18 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/shape_rounded_variants"
+                android:elevation="3dp"
                 android:padding="5dp"
                 android:text="@string/excellent"
-                android:textColor="#FF5722"
+                android:textColor="#AD1457"
                 app:drawableStartCompat="@drawable/ic_star" />
 
             <TextView
                 android:id="@+id/hotel_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/hotel_name"
                 android:textSize="18sp" />
 
@@ -63,11 +64,12 @@
                 android:id="@+id/hotel_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/hotel_address"
-                android:textColor="#0D72FF"
+                android:textColor="#304FFE"
                 android:textSize="15sp" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -77,9 +79,9 @@
                     android:id="@+id/price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/price"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
+                    android:text="@string/price"
                     android:textSize="30sp" />
 
                 <TextView
@@ -88,7 +90,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
-                    android:text="@string/price_description" />
+                    android:text="@string/price_description"
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
@@ -122,18 +125,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+
                     android:background="@drawable/shape_rounded_variants"
                     android:elevation="3dp"
                     android:padding="5dp"
-                    android:text="@string/km_30" />
+                    android:text="@string/km_30"
+                    android:textColor="#455A64" />
 
                 <TextView
                     android:id="@+id/km1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape_rounded_variants"
-                    android:padding="5dp"
                     android:layout_margin="5dp"
+                    android:background="@drawable/shape_rounded_variants"
+                    android:elevation="3dp"
+                    android:padding="5dp"
                     android:text="@string/km_1" />
 
             </LinearLayout>
@@ -147,8 +153,9 @@
                     android:id="@+id/paid_wifi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape_rounded_variants"
                     android:layout_margin="5dp"
+                    android:background="@drawable/shape_rounded_variants"
+                    android:elevation="3dp"
                     android:padding="5dp"
                     android:text="@string/paid_wifi" />
 
@@ -156,9 +163,10 @@
                     android:id="@+id/line3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape_rounded_variants"
-                    android:padding="5dp"
                     android:layout_margin="5dp"
+                    android:background="@drawable/shape_rounded_variants"
+                    android:elevation="3dp"
+                    android:padding="5dp"
                     android:text="@string/line_3" />
 
             </LinearLayout>
@@ -168,177 +176,70 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/hotel_description" />
+                android:text="@string/hotel_description"
+                tools:ignore="VisualLintLongText" />
 
 
-            <!--            TODO блок из 3 секции
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginVertical="8dp"
-                            android:background="@drawable/shape_rounded_variants_card_2"
-                            android:orientation="vertical"
-                            android:padding="8dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_rounded_variants"
+                android:padding="5dp">
 
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="8dp"
-                                android:background="@drawable/shape_rounded_variants_card_2"
-                                android:elevation="3dp"
-                                android:orientation="horizontal"
-                                android:padding="5dp">
+                <ImageView
+                    android:id="@+id/ic_smile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/smile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
 
-                                <ImageView
-                                    android:id="@+id/ic_smile"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@android:color/transparent"
-                                    android:src="@drawable/smile"
-                                    app:tint="@color/black" />
+                <!-- здесь можно спозиционировать через барьер(?), если понадобится -->
 
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/facilities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/facilities"
+                    app:layout_constraintStart_toEndOf="@+id/ic_smile"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                                    <TextView
-                                        android:id="@+id/facilities"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="2dp"
-                                        android:text="@string/facilities" />
+                <TextView
+                    android:id="@+id/essentials_facilities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/essentials"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_smile"
+                    app:layout_constraintTop_toBottomOf="@+id/facilities" />
 
-                                    <TextView
-                                        android:id="@+id/essentials_facilities"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="2dp"
-                                        android:text="@string/essentials" />
-
-                                </LinearLayout>
-
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginStart="125dp"
-                                    android:background="@android:color/transparent"
-                                    android:src="@drawable/arrow_right"
-                                    app:tint="@color/black"
-                                    tools:ignore="ContentDescription" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="8dp"
-                                android:background="@drawable/shape_rounded_variants_card_2"
-                                android:elevation="3dp"
-                                android:orientation="horizontal"
-                                android:padding="5dp">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@android:color/transparent"
-                                    android:src="@drawable/check"
-                                    app:tint="@color/black" />
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="2dp"
-                                        tools:text="Что включено" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="2dp"
-                                        tools:text="Самое необходимое" />
-
-                                </LinearLayout>
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
 
 
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginStart="125dp"
-                                    android:background="@android:color/transparent"
-                                    android:src="@drawable/arrow_right"
-                                    app:tint="@color/black"
-                                    tools:ignore="ContentDescription" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="8dp"
-                                android:background="@drawable/shape_rounded_variants_card_2"
-                                android:elevation="3dp"
-                                android:orientation="horizontal"
-                                android:padding="5dp">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="@android:color/transparent"
-                                    android:src="@drawable/cancel"
-                                    app:tint="@color/black" />
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="2dp"
-                                        tools:text="Что не включено" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginStart="2dp"
-                                        tools:text="Самое необходимое" />
-
-                                </LinearLayout>
-
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_marginStart="125dp"
-                                    android:background="@android:color/transparent"
-                                    android:src="@drawable/arrow_right"
-                                    app:tint="@color/black"
-                                    tools:ignore="ContentDescription" />
-
-                            </LinearLayout>
-
-            -->
 
             <Button
                 android:id="@+id/btn_toRooms"
@@ -346,7 +247,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@android:color/holo_blue_dark"
-                android:text="@string/to_rooms" />
+                android:text="@string/to_rooms"
+                android:textColor="#212121"
+                tools:ignore="VisualLintButtonSize" />
 
 
         </LinearLayout>
