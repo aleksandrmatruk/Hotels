@@ -23,9 +23,19 @@ class Hotel : Fragment() {
         binding = FragmentHotelBinding.inflate(inflater, container, false)
 
         getDataFromApi()
+
+        binding.apply {
+            hotelName.text = getDataAboutHotel().name
+            hotelGrade.text =
+                getDataAboutHotel().rating.toString() + " " + getDataAboutHotel().ratingName
+            hotelAddress.text = getDataAboutHotel().address
+            price.text = getDataAboutHotel().minimalPrice.toString()
+            priceDescription.text = getDataAboutHotel().priceForIt
+            hotelDescription.text = getDataAboutHotel().description
+        }
+
         // TODO: тyт используя метод getDataAboutHotel() надо проставить данные в верстку.
         //  Можно использовать binding.apply{} а за одно почитать про .let, .apply, .also, .with и .run
-
         return binding.root
     }
 
