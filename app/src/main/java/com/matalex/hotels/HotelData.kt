@@ -1,7 +1,6 @@
 package com.matalex.hotels
 
 data class HotelData(
-    val aboutTheHotel: AboutTheHotel,
     val address: String,
     val id: Int,
     val imageUrls: List<String>,
@@ -9,10 +8,7 @@ data class HotelData(
     val name: String,
     val priceForIt: String,
     val rating: Int,
-    val ratingName: String
-)
-
-data class AboutTheHotel(
+    val ratingName: String,
     val description: String,
     val peculiarities: List<String>
 )
