@@ -64,22 +64,20 @@ class Hotel : Fragment() {
         Log.d("MyLog", "name: ${item.name}")
         Log.d("MyLog", "id: ${item.id}")
         Log.d("MyLog", "description: ${item.description}")
-        Log.d("MyLog", "image urls: ${item.image_urls}")
-        Log.d("MyLog", "address: ${item.adress}")
-        Log.d("MyLog", "min price: ${item.minimal_price}")
+        Log.d("MyLog", "image urls: ${item.imageUrls}")
+        Log.d("MyLog", "address: ${item.address}")
+        Log.d("MyLog", "min price: ${item.minimalPrice}")
         Log.d("MyLog", "peculiarities: ${item.peculiarities}")
-        Log.d("MyLog", "price for: ${item.price_for_it}")
+        Log.d("MyLog", "price for: ${item.priceForIt}")
         Log.d("MyLog", "rating: ${item.rating}")
-        Log.d("MyLog", "rating name: ${item.rating_name}")
+        Log.d("MyLog", "rating name: ${item.ratingName}")
     }
 
     private fun getDataAboutHotel(): HotelData{
-        val aboutTheHotel = AboutTheHotel(
-            description = "Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!",
-            peculiarities = listOf("Бесплатный Wifi на всей территории отеля", "1 км до пляжа", "Бесплатный фитнес-клуб", "20 км до аэропорта")
-        )
+
         val resultObject = HotelData(
-            aboutTheHotel = aboutTheHotel,
+            description = "Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!",
+            peculiarities = listOf("Бесплатный Wifi на всей территории отеля", "1 км до пляжа", "Бесплатный фитнес-клуб", "20 км до аэропорта") ,
             address = "Madinat Makadi, Safaga Road, Makadi Bay, Египет",
             id = 1,
             imageUrls = listOf("https://www.atorus.ru/sites/default/files/upload/image/News/56149/Club_Priv%C3%A9_by_Belek_Club_House.jpg", "https://deluxe.voyage/useruploads/articles/The_Makadi_Spa_Hotel_02.jpg", "https://deluxe.voyage/useruploads/articles/article_1eb0a64d00.jpg"),
