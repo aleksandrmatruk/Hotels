@@ -33,9 +33,6 @@ class Hotel : Fragment() {
             priceDescription.text = currentData.priceForIt
             hotelDescription.text = currentData.description
         }
-
-        // TODO: тyт используя метод getDataAboutHotel() надо проставить данные в верстку.
-        //  Можно использовать binding.apply{} а за одно почитать про .let, .apply, .also, .with и .run
         return binding.root
     }
 
