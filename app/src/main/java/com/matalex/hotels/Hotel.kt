@@ -25,13 +25,13 @@ class Hotel : Fragment() {
         getDataFromApi()
 
         binding.apply {
-            hotelName.text = getDataAboutHotel().name
-            hotelGrade.text =
-                getDataAboutHotel().rating.toString() + " " + getDataAboutHotel().ratingName
-            hotelAddress.text = getDataAboutHotel().address
-            price.text = getDataAboutHotel().minimalPrice.toString()
-            priceDescription.text = getDataAboutHotel().priceForIt
-            hotelDescription.text = getDataAboutHotel().description
+            val currentData = getDataAboutHotel()
+            hotelName.text = currentData.name
+            hotelGrade.text = String.format("${currentData.rating} ${currentData.ratingName}")
+            hotelAddress.text = currentData.address
+            price.text = currentData.minimalPrice.toString()
+            priceDescription.text = currentData.priceForIt
+            hotelDescription.text = currentData.description
         }
 
         // TODO: тyт используя метод getDataAboutHotel() надо проставить данные в верстку.
@@ -83,20 +83,28 @@ class Hotel : Fragment() {
         Log.d("MyLog", "rating name: ${item.ratingName}")
     }
 
-    private fun getDataAboutHotel(): HotelData{
+    private fun getDataAboutHotel(): HotelData {
 
-        val resultObject = HotelData(
+        return HotelData(
             description = "Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!",
-            peculiarities = listOf("Бесплатный Wifi на всей территории отеля", "1 км до пляжа", "Бесплатный фитнес-клуб", "20 км до аэропорта") ,
+            peculiarities = listOf(
+                "Бесплатный Wifi на всей территории отеля",
+                "1 км до пляжа",
+                "Бесплатный фитнес-клуб",
+                "20 км до аэропорта"
+            ),
             address = "Madinat Makadi, Safaga Road, Makadi Bay, Египет",
             id = 1,
-            imageUrls = listOf("https://www.atorus.ru/sites/default/files/upload/image/News/56149/Club_Priv%C3%A9_by_Belek_Club_House.jpg", "https://deluxe.voyage/useruploads/articles/The_Makadi_Spa_Hotel_02.jpg", "https://deluxe.voyage/useruploads/articles/article_1eb0a64d00.jpg"),
+            imageUrls = listOf(
+                "https://www.atorus.ru/sites/default/files/upload/image/News/56149/Club_Priv%C3%A9_by_Belek_Club_House.jpg",
+                "https://deluxe.voyage/useruploads/articles/The_Makadi_Spa_Hotel_02.jpg",
+                "https://deluxe.voyage/useruploads/articles/article_1eb0a64d00.jpg"
+            ),
             minimalPrice = 134268,
-            name ="Лучший пятизвездочный отель в Хургаде, Египет",
+            name = "Лучший пятизвездочный отель в Хургаде, Египет",
             priceForIt = "За тур с перелётом",
             rating = 5,
             ratingName = "Превосходно"
         )
-        return resultObject
     }
 }
