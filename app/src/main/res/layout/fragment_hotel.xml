@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,97 +8,94 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape_rounded_variants_card"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="18sp"
-                tools:text="Отель" />
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="@string/hotel"
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/hotel_photos"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image_20"
                 tools:ignore="ContentDescription" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/hotel_grade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/shape_rounded_variants"
-                android:orientation="horizontal"
-                android:padding="5dp">
-
-                <ImageView
-                    android:id="@+id/ic_star"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_star"
-                    tools:ignore="ContentDescription" />
-
-                <TextView
-                    android:id="@+id/hotel_grade"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:textColor="#FFA800"
-                    tools:text="5 Превосходно" />
-
-            </LinearLayout>
+                android:elevation="3dp"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="#9E4705"
+                app:drawableStartCompat="@drawable/ic_star" />
 
             <TextView
                 android:id="@+id/hotel_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="8dp"
-                android:textSize="18sp"
-                tools:text="Steigenberger Makadi" />
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/hotel_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="8dp"
-                android:textColor="#0D72FF"
-                android:textSize="17sp"
-                tools:text="Madinat Makadi, Safaga Road, Makadi Bay, Египет" />
+                android:text=""
+                android:textColor="#304FFE"
+                android:textSize="15sp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    tools:text="от 134 673 ₽" />
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/price_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    tools:text="за тур с перелетом" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text=""
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
@@ -108,227 +106,283 @@
             android:layout_height="match_parent"
             android:layout_marginTop="8dp"
             android:background="@drawable/shape_rounded_variants_card_2"
+            android:elevation="3dp"
             android:orientation="vertical"
             android:padding="16dp">
 
+            <TextView
+                android:id="@+id/description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
                 <TextView
+                    android:id="@+id/km30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_rounded_variants"
+                    android:elevation="3dp"
                     android:padding="5dp"
-                    android:textSize="20sp"
-                    tools:text="Об отеле" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="4dp"
-                    android:background="@drawable/shape_rounded_variants_card_2"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        tools:text="3 линия" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        tools:text="Платный Wi-Fi в фойе" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="4dp"
-                    android:background="@drawable/shape_rounded_variants_card_2"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        tools:text="30 км до аэропорта" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        tools:text="1 км до пляжа" />
-
-                </LinearLayout>
+                    android:text="@string/km_30"
+                    android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/km1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    tools:text="Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!" />
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_rounded_variants"
+                    android:elevation="3dp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:text="@string/km_1" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/paid_wifi"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="8dp"
-                    android:background="@drawable/shape_rounded_variants_card_2"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_rounded_variants"
+                    android:elevation="3dp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:text="@string/paid_wifi" />
 
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:background="@drawable/shape_rounded_variants"
-                        android:orientation="horizontal"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="10dp"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/smile" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="2dp"
-                                tools:text="Удобства" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="2dp"
-                                tools:text="Самое необходимое" />
-
-                        </LinearLayout>
-
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="10dp"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/arrow_right"
-                            tools:ignore="ContentDescription" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:background="@drawable/shape_rounded_variants"
-                        android:orientation="horizontal"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="10dp"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/check" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="2dp"
-                                tools:text="Что включено" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="2dp"
-                                tools:text="Самое необходимое" />
-
-                        </LinearLayout>
-
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="10dp"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/arrow_right"
-                            tools:ignore="ContentDescription" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-
-                        android:background="@drawable/shape_rounded_variants"
-                        android:orientation="horizontal"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="10dp"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/cancel" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="2dp"
-                                tools:text="Что не включено" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="2dp"
-                                tools:text="Самое необходимое" />
-
-                        </LinearLayout>
-
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="10dp"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/arrow_right"
-                            tools:ignore="ContentDescription" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-                <Button
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/line3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="К выбору номера" />
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/shape_rounded_variants"
+                    android:elevation="3dp"
+                    android:padding="5dp"
+                    android:text="@string/line_3" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hotel_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text=""
+                tools:ignore="VisualLintLongText" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_rounded_variants"
+                android:padding="5dp">
+
+
+                <ImageView
+                    android:id="@+id/ic_smile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/smile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
+
+                <!-- здесь можно спозиционировать через барьер(?), если понадобится -->
+
+                <TextView
+                    android:id="@+id/facilities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    android:text="@string/facilities"
+                    app:layout_constraintStart_toEndOf="@+id/ic_smile"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/essentials_facilities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/essentials"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_smile"
+                    app:layout_constraintTop_toBottomOf="@+id/facilities" />
+
+                <ImageView
+                    android:id="@+id/arrow_right_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_rounded_variants"
+                android:padding="5dp">
+
+
+                <ImageView
+                    android:id="@+id/ic_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/check"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
+
+
+                <TextView
+                    android:id="@+id/included"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/included"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/ic_check"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/essentials_facilities_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/essentials"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_check"
+                    app:layout_constraintTop_toBottomOf="@+id/included" />
+
+                <ImageView
+                    android:id="@+id/arrow_right_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_rounded_variants"
+                android:padding="5dp">
+
+
+                <ImageView
+                    android:id="@+id/ic_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/cancel"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
+
+
+                <TextView
+                    android:id="@+id/not_included"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/not_included"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/ic_cancel"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/essentials_facilities_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/essentials"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_cancel"
+                    app:layout_constraintTop_toBottomOf="@+id/not_included" />
+
+                <ImageView
+                    android:id="@+id/arrow_right_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btn_toRooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:text="@string/to_rooms"
+                android:textColor="@color/white"
+                tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
 
         </LinearLayout>
 
