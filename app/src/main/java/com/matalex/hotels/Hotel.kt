@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection")
+
 package com.matalex.hotels
 
 import android.os.Bundle
@@ -6,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -16,34 +17,13 @@ import org.json.JSONObject
 class Hotel : Fragment() {
 
     private lateinit var binding: FragmentHotelBinding
-    lateinit var viewPager: ViewPager
-    lateinit var viewPagerAdapter: ViewPagerAdapter
-    lateinit var imageList: List<Int>
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHotelBinding.inflate(inflater, container, false)
-
-        // initializing variables
-        // of below line with their id.
-        viewPager = binding.idViewPager
-
-        // on below line we are initializing
-        // our image list and adding data to it.
-        imageList = ArrayList<Int>()
-        imageList = imageList + R.drawable.baseline_filter_vintage_24
-        imageList = imageList + R.drawable.baseline_fingerprint_24
-        imageList = imageList + R.drawable.baseline_hdr_plus_24
-
-        // on below line we are initializing our view
-        // pager adapter and adding image list to it.
-        viewPagerAdapter = ViewPagerAdapter(this@Hotel, imageList)
-
-        // on below line we are setting
-        // adapter to our view pager.
-        viewPager.adapter = viewPagerAdapter
 
         getDataFromApi()
 
@@ -55,6 +35,7 @@ class Hotel : Fragment() {
             price.text = currentData.minimalPrice.toString()
             priceDescription.text = currentData.priceForIt
             hotelDescription.text = currentData.description
+            idViewPager.adapter = ViewPagerAdapter(currentData.imageUrls)
         }
         return binding.root
     }

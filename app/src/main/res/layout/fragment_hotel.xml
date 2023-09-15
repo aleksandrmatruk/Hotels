@@ -27,24 +27,14 @@
                 android:text="@string/hotel"
                 android:textSize="18sp" />
 
-            <androidx.viewpager.widget.ViewPager
+            <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/idViewPager"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="ExtraText,SpeakableTextPresentCheck" />
 
-            <!--            <ImageView-->
-            <!--                android:id="@+id/hotel_photos"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="300dp"-->
-            <!--                android:layout_marginStart="15dp"-->
-            <!--                android:layout_marginTop="10dp"-->
-            <!--                android:layout_marginEnd="15dp"-->
-            <!--                android:scaleType="centerCrop"-->
-            <!--                android:src="@drawable/image_20"-->
-            <!--                tools:ignore="ContentDescription" />-->
 
             <TextView
                 android:id="@+id/hotel_grade"
