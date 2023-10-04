@@ -1,106 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/idViewPagerRoom"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:layout_margin="10dp" />
-
-    <TextView
-        android:id="@+id/room_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/standart_room"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroupRoom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_rounded_variants"
-            tools:text="@string/km_1" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_rounded_variants"
-            tools:text="@string/paid_wifi" />
-
-    </com.google.android.material.chip.ChipGroup>
-
-    <TextView
-        android:id="@+id/hotel_grade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/shape_rounded_variants"
-        android:elevation="3dp"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="@string/about_room"
-        android:textColor="#0A398A"
-        app:drawableEndCompat="@drawable/arrow_right"
-        tools:ignore="TextContrastCheck" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/idViewPagerRoom"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:layout_marginStart="15dp" />
 
         <TextView
-            android:id="@+id/price"
+            android:id="@+id/room_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/price"
+            android:layout_margin="15dp"
+            android:text="@string/standart_room"
             android:textColor="@color/black"
-            android:textSize="30sp" />
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_variants"
+                tools:text="@string/km_1" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_variants"
+                tools:text="@string/paid_wifi" />
+
+        </com.google.android.material.chip.ChipGroup>
 
         <TextView
-            android:id="@+id/price_description"
+            android:id="@+id/hotel_grade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/price_description"
-            android:textColor="@color/black" />
+            android:layout_margin="15dp"
+            android:background="@drawable/shape_rounded_variants"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/about_room"
+            android:textColor="#0A398A"
+            app:drawableEndCompat="@drawable/arrow_right"
+            tools:ignore="TextContrastCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/price_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="@string/price_description"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_toRooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="@string/to_rooms"
+            android:textColor="@color/white"
+            tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_toRooms"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="25dp"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:text="@string/to_rooms"
-        android:textColor="@color/white"
-        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

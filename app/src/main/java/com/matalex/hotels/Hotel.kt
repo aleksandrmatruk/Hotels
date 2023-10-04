@@ -6,13 +6,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.android.volley.Request
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
 import com.matalex.hotels.databinding.FragmentHotelBinding
-import org.json.JSONObject
 
 class Hotel : Fragment() {
 
@@ -25,7 +20,7 @@ class Hotel : Fragment() {
     ): View {
         binding = FragmentHotelBinding.inflate(inflater, container, false)
 
-        getDataFromApi()
+//        getDataFromApi()
 
         binding.apply {
             val currentData = getDataAboutHotel()
@@ -42,40 +37,40 @@ class Hotel : Fragment() {
         return binding.root
     }
 
-    private fun getDataFromApi() {
-
-        val url = "https://run.mocky.io/v3/35e0d18e-2521-4f1b-a575-f0fe366f66e3"
-        val queue = Volley.newRequestQueue(context)
-        val stringRequest = StringRequest(Request.Method.GET,
-            url,
-            { response ->
-                parseData(response)
-            },
-            {
-                Toast.makeText(context, "$it", Toast.LENGTH_SHORT).show()
-            }
-        )
-        queue.add(stringRequest)
-
-    }
-
-    private fun parseData(response: String) {
-        val mainObject = JSONObject(response)
-        val item = HotelData(
-            mainObject.getString("name"),
-            mainObject.getInt("id"),
-            listOf(mainObject.getString("image_urls")),
-            mainObject.getInt("minimal_price"),
-            mainObject.getString("name"),
-            mainObject.getString("price_for_it"),
-            mainObject.getInt("rating"),
-            mainObject.getString("rating_name"),
-            mainObject.getJSONObject("about_the_hotel").getString("description"),
-            listOf(mainObject.getJSONObject("about_the_hotel").getString("peculiarities")),
-
-            )
-
-    }
+//    private fun getDataFromApi() {
+//
+//        val url = "https://run.mocky.io/v3/35e0d18e-2521-4f1b-a575-f0fe366f66e3"
+//        val queue = Volley.newRequestQueue(context)
+//        val stringRequest = StringRequest(Request.Method.GET,
+//            url,
+//            { response ->
+//                parseData(response)
+//            },
+//            {
+//                Toast.makeText(context,"$it",Toast.LENGTH_SHORT).show()
+//            }
+//        )
+//        queue.add(stringRequest)
+//
+//    }
+//
+//    private fun parseData(response: String) {
+//        val mainObject = JSONObject(response)
+//        val item = HotelData(
+//            mainObject.getString("name"),
+//            mainObject.getInt("id"),
+//            listOf(mainObject.getString("image_urls")),
+//            mainObject.getInt("minimal_price"),
+//            mainObject.getString("name"),
+//            mainObject.getString("price_for_it"),
+//            mainObject.getInt("rating"),
+//            mainObject.getString("rating_name"),
+//            mainObject.getJSONObject("about_the_hotel").getString("description"),
+//            listOf(mainObject.getJSONObject("about_the_hotel").getString("peculiarities")),
+//
+//            )
+//
+//    }
 
     private fun getDataAboutHotel(): HotelData {
 
