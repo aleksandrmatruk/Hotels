@@ -3,10 +3,10 @@
 package com.matalex.hotels
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
@@ -32,10 +32,12 @@ class Hotel : Fragment() {
             hotelName.text = currentData.name
             hotelGrade.text = String.format("${currentData.rating} ${currentData.ratingName}")
             hotelAddress.text = currentData.address
+//            chipGroup = currentData.peculiarities
             price.text = currentData.minimalPrice.toString()
             priceDescription.text = currentData.priceForIt
             hotelDescription.text = currentData.description
             idViewPager.adapter = ViewPagerAdapter(currentData.imageUrls)
+
         }
         return binding.root
     }
@@ -50,7 +52,7 @@ class Hotel : Fragment() {
                 parseData(response)
             },
             {
-                Log.d("MyLog", "Volley error: $it")
+                Toast.makeText(context, "$it", Toast.LENGTH_SHORT).show()
             }
         )
         queue.add(stringRequest)
@@ -72,16 +74,7 @@ class Hotel : Fragment() {
             listOf(mainObject.getJSONObject("about_the_hotel").getString("peculiarities")),
 
             )
-        Log.d("MyLog", "name: ${item.name}")
-        Log.d("MyLog", "id: ${item.id}")
-        Log.d("MyLog", "description: ${item.description}")
-        Log.d("MyLog", "image urls: ${item.imageUrls}")
-        Log.d("MyLog", "address: ${item.address}")
-        Log.d("MyLog", "min price: ${item.minimalPrice}")
-        Log.d("MyLog", "peculiarities: ${item.peculiarities}")
-        Log.d("MyLog", "price for: ${item.priceForIt}")
-        Log.d("MyLog", "rating: ${item.rating}")
-        Log.d("MyLog", "rating name: ${item.ratingName}")
+
     }
 
     private fun getDataAboutHotel(): HotelData {

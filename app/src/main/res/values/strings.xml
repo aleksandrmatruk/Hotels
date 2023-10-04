@@ -19,4 +19,6 @@
     <string name="to_rooms">К выбору номера</string>
     <string name="included">Что включено</string>
     <string name="not_included">Что не включено</string>
+    <string name="about_room">Подробнее о номере</string>
+    <string name="standart_room">Стандартный с видом на бассейн или сад</string>
 </resources>

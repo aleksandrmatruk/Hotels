@@ -16,7 +16,6 @@ class ViewPagerAdapter(private val imageList: List<String>) :
                     .get()
                     .load(url)
                     .placeholder(R.drawable.baseline_hdr_plus_24)
-                    .centerCrop()
                     .into(idIVImage)
 
             }

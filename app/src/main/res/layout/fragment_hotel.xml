@@ -23,8 +23,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/black"
                 android:text="@string/hotel"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <androidx.viewpager2.widget.ViewPager2
@@ -56,8 +56,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/black"
                 android:text="@string/hotel_name"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
@@ -82,8 +82,8 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="8dp"
-                    android:textColor="@color/black"
                     android:text="@string/price"
+                    android:textColor="@color/black"
                     android:textSize="30sp" />
 
                 <TextView
@@ -115,276 +115,255 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:padding="5dp"
-                android:textColor="@color/black"
                 android:text="@string/hotel"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/km30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/shape_rounded_variants"
-                    android:elevation="3dp"
-                    android:padding="5dp"
-                    android:text="@string/km_30"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/km1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/shape_rounded_variants"
-                    android:elevation="3dp"
-                    android:textColor="@color/black"
-                    android:padding="5dp"
-                    android:text="@string/km_1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/paid_wifi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/shape_rounded_variants"
-                    android:elevation="3dp"
-                    android:textColor="@color/black"
-                    android:padding="5dp"
-                    android:text="@string/paid_wifi" />
-
-                <TextView
-                    android:id="@+id/line3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:textColor="@color/black"
-                    android:background="@drawable/shape_rounded_variants"
-                    android:elevation="3dp"
-                    android:padding="5dp"
-                    android:text="@string/line_3" />
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/hotel_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
-                android:text="@string/hotel_description"
-                tools:ignore="VisualLintLongText" />
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shape_rounded_variants"
-                android:padding="5dp">
+                android:layout_height="wrap_content">
 
-
-                <ImageView
-                    android:id="@+id/ic_smile"
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/smile"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black"
-                    tools:ignore="ContentDescription" />
+                    android:background="@drawable/shape_rounded_variants"
+                    tools:text="@string/km_1" />
 
-                <!-- здесь можно спозиционировать через барьер(?), если понадобится -->
-
-                <TextView
-                    android:id="@+id/facilities"
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:textColor="@color/black"
-                    android:text="@string/facilities"
-                    app:layout_constraintStart_toEndOf="@+id/ic_smile"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:background="@drawable/shape_rounded_variants"
+                    tools:text="@string/paid_wifi" />
 
-                <TextView
-                    android:id="@+id/essentials_facilities"
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/essentials"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ic_smile"
-                    app:layout_constraintTop_toBottomOf="@+id/facilities" />
+                    android:background="@drawable/shape_rounded_variants"
+                    tools:text="@string/line_3" />
 
-                <ImageView
-                    android:id="@+id/arrow_right_1"
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="5dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/arrow_right"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black"
-                    tools:ignore="ContentDescription" />
+                    android:background="@drawable/shape_rounded_variants"
+                    tools:text="@string/km_30" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shape_rounded_variants"
-                android:padding="5dp">
-
-
-                <ImageView
-                    android:id="@+id/ic_check"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/check"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black"
-                    tools:ignore="ContentDescription" />
-
-
-                <TextView
-                    android:id="@+id/included"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/included"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toEndOf="@+id/ic_check"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/essentials_facilities_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/essentials"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ic_check"
-                    app:layout_constraintTop_toBottomOf="@+id/included" />
-
-                <ImageView
-                    android:id="@+id/arrow_right_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="5dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/arrow_right"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black"
-                    tools:ignore="ContentDescription" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shape_rounded_variants"
-                android:padding="5dp">
-
-
-                <ImageView
-                    android:id="@+id/ic_cancel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/cancel"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black"
-                    tools:ignore="ContentDescription" />
-
-
-                <TextView
-                    android:id="@+id/not_included"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/not_included"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toEndOf="@+id/ic_cancel"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/essentials_facilities_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/essentials"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ic_cancel"
-                    app:layout_constraintTop_toBottomOf="@+id/not_included" />
-
-                <ImageView
-                    android:id="@+id/arrow_right_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="5dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/arrow_right"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black"
-                    tools:ignore="ContentDescription" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <Button
-                android:id="@+id/btn_toRooms"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="@android:color/holo_blue_dark"
-                android:text="@string/to_rooms"
-                android:textColor="@color/white"
-                tools:ignore="VisualLintButtonSize,TextContrastCheck" />
-
+            </com.google.android.material.chip.ChipGroup>
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/hotel_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/hotel_description"
+            android:textColor="@color/black"
+            tools:ignore="VisualLintLongText" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_rounded_variants"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:id="@+id/ic_smile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/smile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription" />
+
+            <!-- здесь можно спозиционировать через барьер(?), если понадобится -->
+
+            <TextView
+                android:id="@+id/facilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/facilities"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/ic_smile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/essentials_facilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/essentials"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_smile"
+                app:layout_constraintTop_toBottomOf="@+id/facilities" />
+
+            <ImageView
+                android:id="@+id/arrow_right_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_rounded_variants"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:id="@+id/ic_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/included"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/included"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/ic_check"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/essentials_facilities_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/essentials"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_check"
+                app:layout_constraintTop_toBottomOf="@+id/included" />
+
+            <ImageView
+                android:id="@+id/arrow_right_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_rounded_variants"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:id="@+id/ic_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/not_included"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/not_included"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/ic_cancel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/essentials_facilities_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/essentials"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_cancel"
+                app:layout_constraintTop_toBottomOf="@+id/not_included" />
+
+            <ImageView
+                android:id="@+id/arrow_right_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/btn_toRooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="@string/to_rooms"
+            android:textColor="@color/white"
+            tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+
     </LinearLayout>
+
 
 </androidx.core.widget.NestedScrollView>
